@@ -8,5 +8,4 @@ def ship_report():
     print("\n[SHIP_REPORTS]")
     print("Fuel is stable")
     print("Oxygen level good")
-    print("Temperature is normal")
     print("No Ship damage")

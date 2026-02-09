@@ -10,7 +10,7 @@ def launch_jupiter2_ship(start,name):
         print(f"\nAll system good {name} Successufully launch!")
         print(f"Welcome to {name}")
         
-        mission_control.create_mission("Find a new Planet.Earth is no longer sustainable")
+        mission_control.create_mission("Find a new Planet.Earth is no longer for sustainable")
         time.sleep(2)
 
         mission_control.get_mission_status("Scanning planet atmosphere")
@@ -30,7 +30,7 @@ def launch_jupiter2_ship(start,name):
     
 
         print("\nSelect control mode:")
-        mode = int(input("Press 1 for AI mode || Press 2 for Manual: "))
+        mode = int(input("press 1 for AI mode || press 2 for Manual: "))
 
         if mode == 1:
             ship_control.initialize_ai_ship(True)   
@@ -39,10 +39,10 @@ def launch_jupiter2_ship(start,name):
           
      
     elif start == 0:
-        print("\nEngine Shutdown")
+        print("\nEngine is stopping...")
         
         
 
 while True:
-    id = int(input("\nSTART: 1 || STOP: 0  "))
-    launch_jupiter2_ship(id,"Jupiter2")
+    option = int(input("\nSTART: 1 || STOP: 0  :"))
+    launch_jupiter2_ship(option,"Jupiter2")
