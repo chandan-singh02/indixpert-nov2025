@@ -1,4 +1,4 @@
-
+import json
 
 registered_students = []
 
@@ -18,7 +18,11 @@ def register_student():
 
 
 def get_all_registration():
-    pass
+    if len(registered_students) == 0:
+        print("\nNo registration found in database")
+        return False
+
+    print(json.dumps(registered_students, indent=4))
 
 
 

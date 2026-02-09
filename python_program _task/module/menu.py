@@ -10,6 +10,7 @@ def menu():
         print("5. Search Student Records")
         print("6. View Registered Students")
         print("7. View Student Records")
+        print("8. LOGOUT")
 
 
         choice = input("\nSelect one option: ")
@@ -18,31 +19,31 @@ def menu():
             choice = int(choice)
         
         if choice == 1:
-            print("\nREGISTRATION STUDENT")
+            print("\n[REGISTRATION STUDENT]")
             register_student()
 
         elif choice == 2:
-            print("\nADD STUDENT")
+            print("\n[ADD STUDENT]")
             student_records.add_student_records()
 
         elif choice ==  3:
-            print("\nUPDATE STUDENT")
+            print("\n[UPDATE STUDENT]")
             student_records.update_students()
 
         elif choice == 4:
-            print("\nDELETE STUDENT")
+            print("\n[DELETE STUDENT]")
             student_records.delete_students()
             
         elif choice == 5:
-            print("\nSEARCH STUDENT")
+            print("\n[SEARCH STUDENT]")
             student_records.search_students()
         
         elif choice == 6:
-            print("\n ALL REGISTERED STUDENTS")
+            print("\n[ALL REGISTERED STUDENTS]")
             get_all_registration()
         
         elif choice == 7:
-            print("ALL STUDENT RECORDS")
+            print("[ALL STUDENT RECORDS]")
             student_records.get_all_students()
         
         elif choice == 8:
