@@ -44,5 +44,5 @@ def launch_jupiter2_ship(start,name):
         
 
 while True:
-    option = int(input("\nSTART: 1 || STOP: 0  :"))
+    option = int(input("\nSTART: 1 || STOP: 0  : "))
     launch_jupiter2_ship(option,"Jupiter2")
