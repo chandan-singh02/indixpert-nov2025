@@ -1,6 +1,7 @@
 
 from registration_students import registered_students
 import json
+
 students_records = []
 
 def is_student_registered(student_id):

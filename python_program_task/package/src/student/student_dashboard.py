@@ -1,5 +1,3 @@
-# def student_dash():
-#     print("Welcome to Student Dashboard")
 
 def create_student():
     print("\nStudent created")
