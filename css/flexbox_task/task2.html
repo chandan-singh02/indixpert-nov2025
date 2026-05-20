@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Flex Layout Task</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Arial;
+      }
+
+      .container {
+        width: 900px;
+        background: red;
+        padding: 30px;
+        display: flex;
+        gap: 20px;
+      }
+
+      /* left sidebar */
+
+      .sidebar {
+        width: 160px;
+        background: #120914;
+      }
+
+      /* right content */
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .top-line {
+        height: 2px;
+        background: #e2e2e2;
+      }
+
+      .hero {
+        height: 150px;
+        background: #e7e7e7;
+        border-radius: 6px;
+      }
+
+      /* Mmidddle section */
+
+      .middle {
+        display: flex;
+        gap: 35px;
+      }
+
+      .left-boxes {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .cards {
+        border: 1px solid #e5e5e5;
+        padding: 12px;
+        display: flex;
+        gap: 12px;
+        border-radius: 6px;
+      }
+
+      .small-card {
+        width: 80px;
+        height: 80px;
+        background: #e7e7e7;
+        border-radius: 5px;
+      }
+
+      .double-cards {
+        border: 1px solid #e5e5e5;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        border-radius: 6px;
+      }
+
+      .double-card1 {
+        width: 115px;
+        height: 70px;
+        background: #e7e7e7;
+        border-radius: 5px;
+      }
+
+      .double-card2 {
+        width: 95px;
+        height: 60px;
+        background: #e7e7e7;
+        border-radius: 5px;
+        align-self: center;
+      }
+
+      .big-card {
+        width: 250px;
+        height: 245px;
+        border: 1px solid #e5e5e5;
+        border-radius: 6px;
+        /* overflow: hidden; */
+        background: white;
+      }
+
+      .big-top {
+        height: 110px;
+        background: #e7e7e7;
+      }
+
+      .bottom {
+        background: #e7e7e7;
+        padding: 15px;
+        display: flex;
+        gap: 15px;
+        border-radius: 6px;
+        align-items: center;
+      }
+
+      .b1,
+      .b2,
+      .b3,
+      .b4 {
+        width: 90px;
+        border-radius: 5px;
+        background: #dcdcdc;
+      }
+
+      .b1 {
+        height: 75px;
+      }
+
+      .b2 {
+        height: 105px;
+        background: linear-gradient(to bottom, #dcdcdc 55%, #f8f8f8 55%);
+      }
+
+      .b3 {
+        height: 95px;
+      }
+
+      .b4 {
+        height: 105px;
+        background: white;
+      }
+
+      .small-last {
+        width: 45px;
+        height: 70px;
+        background: white;
+        border-radius: 8px;
+        margin-left: auto;
+      }
+
+      .bottom-line {
+        height: 2px;
+        background: #e2e2e2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- left -->
+      <div class="sidebar"></div>
+
+      <!--right -->
+      <div class="content">
+        <div class="top-line"></div>
+
+        <div class="hero">hero</div>
+
+        <div class="middle">
+          <div class="left-boxes">
+            <div class="cards">
+              <div class="small-card">card1</div>
+              <div class="small-card">card2</div>
+              <div class="small-card">card3</div>
+            </div>
+
+            <div class="double-cards">
+              <div class="double-card1"></div>
+              <div class="double-card2"></div>
+            </div>
+          </div>
+
+          <div class="big-card">
+            <div class="big-top"></div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="b1"></div>
+          <div class="b2"></div>
+          <div class="b3"></div>
+          <div class="b4"></div>
+
+          <div class="small-last"></div>
+        </div>
+
+        <div class="bottom-line"></div>
+      </div>
+    </div>
+  </body>
+</html>

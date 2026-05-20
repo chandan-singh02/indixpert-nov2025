@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Flex Navigation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        font-family: Arial, sans-serif;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        min-height: 100vh;
+        gap: 10px; /* space between task 1 and task 2 */
+      }
+
+      .navbar {
+        width: 700px;
+        background: #f2f2f2;
+        border: 2px solid #5aa3e8;
+        padding: 20px 15px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        background: #4f7ea8;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 10px;
+        border: 2px solid #7cc7ff;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      .nav-links li a:hover {
+        background: #3d6d96;
+      }
+
+      /*container */
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        padding: 8px;
+        border: 3px solid #7ec8ff;
+        background: #f2f2f2;
+
+        display: flex;
+        gap: 10px;
+      }
+
+      .box {
+        background: #557ca5;
+        color: white;
+        padding: 12px;
+        border-radius: 10px;
+        border: 2px solid #aee7ff;
+        font-size: 18px;
+        line-height: 1.6;
+
+        /* equal width columns */
+        flex: 1;
+      }
+
+      .parent {
+        width: 500px;
+        height: 380px;
+        background: #f2f2f2;
+        border: 3px solid #7ec8ff;
+        border-radius: 15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .child {
+        background: #557ca5;
+        color: white;
+        padding: 20px 40px;
+        font-size: 22px;
+      }
+
+      .container-4 {
+        width: 720px;
+        padding: 25px;
+        border: 3px solid #7ec8ff;
+        background: #f2f2f2;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+      }
+
+      .item {
+        background: #557ca5;
+        color: white;
+        padding: 18px 25px;
+        border-radius: 15px;
+        border: 2px solid #aee7ff;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>TASK 1</h2>
+    <div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Products</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <h2>TASK 2</h2>
+    <div class="container">
+      <div class="box">I am small</div>
+
+      <div class="box">I have more content than the very small item.</div>
+
+      <div class="box">
+        I have lots of content. So much content that I don't know where it is
+        all going to go. I'm glad that CSS is pretty good at dealing with
+        situations where we end up with more words than expected!
+      </div>
+    </div>
+
+    <h2>TASK 3</h2>
+    <div class="parent">
+      <div class="child">Center me.</div>
+    </div>
+
+    <h2>TASK 4</h2>
+    <div class="container-4">
+      <div class="item">Turnip</div>
+      <div class="item">greens</div>
+      <div class="item">yarrow</div>
+      <div class="item">ricebean</div>
+      <div class="item">rutabaga</div>
+      <div class="item">endive</div>
+      <div class="item">cauliflower</div>
+      <div class="item">sea lettuce</div>
+      <div class="item">kohlrabi</div>
+      <div class="item">amaranth</div>
+    </div>
+  </body>
+</html>
