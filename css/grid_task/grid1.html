@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>All Grid Tasks</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 40px;
+
+        color: white;
+      }
+
+      section {
+        margin-bottom: 80px;
+      }
+
+      h1 {
+        color: #1ea7ff;
+        margin-bottom: 30px;
+        font-size: 50px;
+      }
+
+      /* TASK 1 */
+
+      .grid1 {
+        background: #efefef;
+        border: 2px solid #4aa3ff;
+        padding: 20px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .grid1 div {
+        background: #567ca5;
+        padding: 20px;
+        border-radius: 10px;
+        border: 3px solid #9fd3e5;
+        font-size: 28px;
+      }
+
+      /* TASK 2 */
+
+      .grid2 {
+        background: #efefef;
+        border: 2px solid #4aa3ff;
+        padding: 10px;
+        height: 400px;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .box1 {
+        background: #7d96a3;
+        border: 4px solid #4f6672;
+        border-radius: 10px;
+        padding: 20px;
+
+        grid-column: 1/4;
+        grid-row: 1/3;
+      }
+
+      .box2 {
+        background: rgba(226, 164, 177, 0.7);
+        border: 4px solid #d58d9b;
+        border-radius: 10px;
+        padding: 20px;
+
+        grid-column: 2/5;
+        grid-row: 2/5;
+      }
+
+      /* TASK 3 */
+
+      .grid3 {
+        background: #efefef;
+        border: 2px solid #4aa3ff;
+        padding: 10px;
+
+        display: grid;
+        gap: 20px;
+
+        grid-template-columns: 1fr 2fr;
+      }
+
+      .grid3 div {
+        background: #567ca5;
+        padding: 20px;
+        border-radius: 10px;
+        border: 3px solid #9fd3e5;
+        font-size: 28px;
+      }
+
+      .t3-one {
+        grid-column: 1/3;
+      }
+
+      .t3-two {
+        grid-column: 1/2;
+      }
+
+      .t3-three {
+        grid-column: 2/3;
+      }
+
+      .t3-four {
+        grid-column: 2/3;
+      }
+
+      /* TASK 4 */
+
+      .gallery {
+        background: #efefef;
+        border: 2px solid #4aa3ff;
+        padding: 10px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0;
+      }
+
+      .tags span {
+        background: #b5b5b5;
+        padding: 8px 14px;
+        border-radius: 4px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- TASK 1 -->
+
+    <section>
+      <h1>Task 1</h1>
+
+      <div class="grid1">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+      </div>
+    </section>
+
+    <!-- TASK 2 -->
+
+    <section>
+      <h1>Task 2</h1>
+
+      <div class="grid2">
+        <div class="box1">One</div>
+
+        <div class="box2">Two</div>
+      </div>
+    </section>
+
+    <!-- TASK 3 -->
+
+    <section>
+      <h1>Task 3</h1>
+
+      <div class="grid3">
+        <div class="t3-one">One</div>
+
+        <div class="t3-two">Two</div>
+
+        <div class="t3-three">Three</div>
+
+        <div class="t3-four">Four</div>
+      </div>
+    </section>
+
+    <!-- TASK 4 -->
+
+    <section>
+      <h1>Task 4</h1>
+
+      <div class="gallery">
+        <div class="card">
+          <img
+            src="https://mdn.github.io/shared-assets/images/examples/balloons1.jpg"
+          />
+
+          <div class="tags">
+            <span>balloon</span>
+            <span>red</span>
+            <span>sky</span>
+            <span>blue</span>
+            <span>Hot air balloon</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg"
+          />
+
+          <div class="tags">
+            <span>balloons</span>
+            <span>houses</span>
+            <span>train</span>
+            <span>harborside</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg"
+          />
+
+          <div class="tags">
+            <span>balloons</span>
+            <span>inflating</span>
+            <span>green</span>
+            <span>blue</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://mdn.github.io/shared-assets/images/examples/balloons4.jpg"
+          />
+
+          <div class="tags">
+            <span>balloon</span>
+            <span>sun</span>
+            <span>sky</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
