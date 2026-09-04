@@ -1,0 +1,10 @@
+
+@include media-breakpoint-down(md) {
+  .topbar {
+    display: none;
+  }
+
+  h1 {
+    font-size: 34px !important;
+  }
+}

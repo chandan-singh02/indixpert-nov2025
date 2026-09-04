@@ -1,0 +1,955 @@
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Data Utility</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: lightgray;
+      }
+
+      button {
+        padding: 6px 12px;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+
+      .add-user-btn {
+        margin-bottom: 15px;
+        padding: 10px 18px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .update-btn {
+        background-color: orange;
+        border: none;
+      }
+
+      .delete-btn {
+        background-color: red;
+        color: white;
+        border: none;
+      }
+
+      /* MODAL */
+
+      .modal {
+        display: none;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.5);
+
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: white;
+
+        width: 400px;
+
+        padding: 25px;
+
+        border-radius: 8px;
+
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .modal-content h2 {
+        margin-top: 0;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .form-group input[type="text"],
+      .form-group input[type="date"],
+      .form-group input[type="number"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+      }
+
+      .skills-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .skill-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .modal-buttons {
+        margin-top: 20px;
+      }
+
+      .save-btn {
+        background-color: blue;
+        color: white;
+        border: none;
+      }
+
+      .cancel-btn {
+        background-color: gray;
+        color: white;
+        border: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script>
+      // ============================================================
+      // USER DATA
+      // ============================================================
+
+      var users = [
+        {
+          id: 101,
+          name: "  alex JOHNSON ",
+          dob: "1992-06-15",
+          salary: "55000",
+          skills: ["html", "css", "javascript"],
+        },
+
+        {
+          id: 102,
+          name: "  maria  smith  ",
+          dob: "1988-11-03",
+          salary: "72000",
+          skills: ["react", "node", "css"],
+        },
+
+        {
+          id: 103,
+          name: "john doe",
+          dob: "1996-02-25",
+          salary: "48000",
+          skills: ["vue", "javascript", "html"],
+        },
+      ];
+
+      var app = document.getElementById("app");
+
+      // ============================================================
+      // AVAILABLE SKILLS
+      // ============================================================
+
+      var availableSkills = [
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "node",
+        "vue",
+      ];
+
+      // ============================================================
+      // TITLE
+      // ============================================================
+
+      var tableTitle = document.createElement("h3");
+
+      tableTitle.innerHTML = "User Data Table";
+
+      tableTitle.style.color = "blue";
+
+      app.appendChild(tableTitle);
+
+      var line1 = document.createElement("hr");
+
+      app.appendChild(line1);
+
+      // ============================================================
+      // ADD USER BUTTON
+      // ============================================================
+
+      var addUserButton = document.createElement("button");
+
+      addUserButton.innerHTML = "Add New User";
+
+      addUserButton.className = "add-user-btn";
+
+      app.appendChild(addUserButton);
+
+      // ============================================================
+      // TABLE
+      // ============================================================
+
+      var table = document.createElement("table");
+
+      // ============================================================
+      // TABLE HEAD
+      // ============================================================
+
+      var thead = document.createElement("thead");
+
+      var headerRow = document.createElement("tr");
+
+      var headers = ["Name", "DoB", "Age", "Salary", "Skills", "Action"];
+
+      for (var i = 0; i < headers.length; i++) {
+        var th = document.createElement("th");
+
+        th.innerHTML = headers[i];
+
+        headerRow.appendChild(th);
+      }
+
+      thead.appendChild(headerRow);
+
+      table.appendChild(thead);
+
+      // ============================================================
+      // TABLE BODY
+      // ============================================================
+
+      var tbody = document.createElement("tbody");
+
+      table.appendChild(tbody);
+
+      app.appendChild(table);
+
+      // ============================================================
+      // INFORMATION
+      // ============================================================
+
+      var skillsText = document.createElement("p");
+
+      var jsUsersText = document.createElement("p");
+
+      var salaryText = document.createElement("p");
+
+      var oldestText = document.createElement("p");
+
+      app.appendChild(skillsText);
+
+      app.appendChild(jsUsersText);
+
+      app.appendChild(salaryText);
+
+      app.appendChild(oldestText);
+
+      // ============================================================
+      // CREATE ADD/UPDATE MODAL
+      // ============================================================
+
+      var modal = document.createElement("div");
+
+      modal.className = "modal";
+
+      modal.id = "userModal";
+
+      // Modal content
+
+      var modalContent = document.createElement("div");
+
+      modalContent.className = "modal-content";
+
+      modal.appendChild(modalContent);
+
+      // Modal title
+
+      var modalTitle = document.createElement("h2");
+
+      modalTitle.innerHTML = "Add New User";
+
+      modalContent.appendChild(modalTitle);
+
+      // ============================================================
+      // NAME INPUT
+      // ============================================================
+
+      var nameGroup = document.createElement("div");
+
+      nameGroup.className = "form-group";
+
+      var nameLabel = document.createElement("label");
+
+      nameLabel.innerHTML = "Name";
+
+      var nameInput = document.createElement("input");
+
+      nameInput.type = "text";
+
+      nameInput.placeholder = "Enter name";
+
+      nameGroup.appendChild(nameLabel);
+
+      nameGroup.appendChild(nameInput);
+
+      modalContent.appendChild(nameGroup);
+
+      // ============================================================
+      // DOB INPUT
+      // ============================================================
+
+      var dobGroup = document.createElement("div");
+
+      dobGroup.className = "form-group";
+
+      var dobLabel = document.createElement("label");
+
+      dobLabel.innerHTML = "Date of Birth";
+
+      var dobInput = document.createElement("input");
+
+      dobInput.type = "date";
+
+      dobGroup.appendChild(dobLabel);
+
+      dobGroup.appendChild(dobInput);
+
+      modalContent.appendChild(dobGroup);
+
+      // ============================================================
+      // SALARY INPUT
+      // ============================================================
+
+      var salaryGroup = document.createElement("div");
+
+      salaryGroup.className = "form-group";
+
+      var salaryLabel = document.createElement("label");
+
+      salaryLabel.innerHTML = "Salary";
+
+      var salaryInput = document.createElement("input");
+
+      salaryInput.type = "number";
+
+      salaryInput.placeholder = "Enter salary";
+
+      salaryGroup.appendChild(salaryLabel);
+
+      salaryGroup.appendChild(salaryInput);
+
+      modalContent.appendChild(salaryGroup);
+
+      // ============================================================
+      // SKILLS CHECKBOXES
+      // ============================================================
+
+      var skillsGroup = document.createElement("div");
+
+      skillsGroup.className = "form-group";
+
+      var skillsLabel = document.createElement("label");
+
+      skillsLabel.innerHTML = "Skills";
+
+      skillsGroup.appendChild(skillsLabel);
+
+      var skillsContainer = document.createElement("div");
+
+      skillsContainer.className = "skills-container";
+
+      for (var i = 0; i < availableSkills.length; i++) {
+        var skillWrapper = document.createElement("label");
+
+        skillWrapper.className = "skill-checkbox";
+
+        var checkbox = document.createElement("input");
+
+        checkbox.type = "checkbox";
+
+        checkbox.value = availableSkills[i];
+
+        checkbox.className = "skill-checkbox-input";
+
+        skillWrapper.appendChild(checkbox);
+
+        skillWrapper.appendChild(document.createTextNode(availableSkills[i]));
+
+        skillsContainer.appendChild(skillWrapper);
+      }
+
+      skillsGroup.appendChild(skillsContainer);
+
+      modalContent.appendChild(skillsGroup);
+
+      // ============================================================
+      // MODAL BUTTONS
+      // ============================================================
+
+      var modalButtons = document.createElement("div");
+
+      modalButtons.className = "modal-buttons";
+
+      var saveButton = document.createElement("button");
+
+      saveButton.innerHTML = "Save";
+
+      saveButton.className = "save-btn";
+
+      var cancelButton = document.createElement("button");
+
+      cancelButton.innerHTML = "Cancel";
+
+      cancelButton.className = "cancel-btn";
+
+      modalButtons.appendChild(saveButton);
+
+      modalButtons.appendChild(cancelButton);
+
+      modalContent.appendChild(modalButtons);
+
+      document.body.appendChild(modal);
+
+      // ============================================================
+      // VARIABLE TO KNOW IF WE ARE ADDING OR UPDATING
+      // ============================================================
+
+      var editingUserId = null;
+
+      // ============================================================
+      // GET AGE
+      // ============================================================
+
+      function calculateAge(dobString) {
+        var today = new Date();
+
+        var dob = new Date(dobString);
+
+        var age = today.getFullYear() - dob.getFullYear();
+
+        var monthDifference = today.getMonth() - dob.getMonth();
+
+        if (
+          monthDifference < 0 ||
+          (monthDifference === 0 && today.getDate() < dob.getDate())
+        ) {
+          age--;
+        }
+
+        return age;
+      }
+
+      // ============================================================
+      // FORMAT NAME
+      // ============================================================
+
+      function formatName(name) {
+        var words = name.trim().toLowerCase().split(/\s+/);
+
+        var newWords = words.map(function (word) {
+          return word.charAt(0).toUpperCase() + word.slice(1);
+        });
+
+        return newWords.join(" ");
+      }
+
+      // ============================================================
+      // RENDER TABLE
+      // ============================================================
+
+      function renderTable() {
+        // Remove old rows
+
+        tbody.innerHTML = "";
+
+        // -----------------------------
+        // CREATE ROWS
+        // -----------------------------
+
+        users.forEach(function (user) {
+          var row = document.createElement("tr");
+
+          // NAME
+
+          var nameCell = document.createElement("td");
+
+          nameCell.innerHTML = formatName(user.name);
+
+          // DOB
+
+          var dobCell = document.createElement("td");
+
+          var dob = new Date(user.dob);
+
+          dobCell.innerHTML = dob.toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+          });
+
+          // AGE
+
+          var ageCell = document.createElement("td");
+
+          ageCell.innerHTML = calculateAge(user.dob);
+
+          // SALARY
+
+          var salaryCell = document.createElement("td");
+
+          salaryCell.innerHTML = Number(user.salary);
+
+          // SKILLS
+
+          var skillsCell = document.createElement("td");
+
+          skillsCell.innerHTML = user.skills.join(", ");
+
+          // ACTION
+
+          var actionCell = document.createElement("td");
+
+          var updateButton = document.createElement("button");
+
+          updateButton.innerHTML = "Update";
+
+          updateButton.className = "update-btn";
+
+          updateButton.setAttribute("data-action", "update");
+
+          updateButton.setAttribute("data-id", user.id);
+
+          var deleteButton = document.createElement("button");
+
+          deleteButton.innerHTML = "Delete";
+
+          deleteButton.className = "delete-btn";
+
+          deleteButton.setAttribute("data-action", "delete");
+
+          deleteButton.setAttribute("data-id", user.id);
+
+          actionCell.appendChild(updateButton);
+
+          actionCell.appendChild(deleteButton);
+
+          // Add cells
+
+          row.appendChild(nameCell);
+
+          row.appendChild(dobCell);
+
+          row.appendChild(ageCell);
+
+          row.appendChild(salaryCell);
+
+          row.appendChild(skillsCell);
+
+          row.appendChild(actionCell);
+
+          tbody.appendChild(row);
+        });
+
+        // Update all information
+
+        updateStatistics();
+      }
+
+      // ============================================================
+      // UPDATE STATISTICS
+      // ============================================================
+
+      function updateStatistics() {
+        // -----------------------------
+        // ALL SKILLS
+        // -----------------------------
+
+        var allSkills = [];
+
+        for (var i = 0; i < users.length; i++) {
+          for (var j = 0; j < users[i].skills.length; j++) {
+            allSkills.push(users[i].skills[j]);
+          }
+        }
+
+        // -----------------------------
+        // UNIQUE SKILLS
+        // -----------------------------
+
+        var uniqueSkills = [];
+
+        for (var i = 0; i < allSkills.length; i++) {
+          if (uniqueSkills.indexOf(allSkills[i]) === -1) {
+            uniqueSkills.push(allSkills[i]);
+          }
+        }
+
+        uniqueSkills.sort();
+
+        skillsText.innerHTML =
+          "<strong>Unique Skills:</strong> " + uniqueSkills.join(", ");
+
+        // -----------------------------
+        // JAVASCRIPT USERS
+        // -----------------------------
+
+        var jsUsers = users.filter(function (user) {
+          return user.skills.indexOf("javascript") !== -1;
+        });
+
+        jsUsersText.innerHTML =
+          "<strong>JavaScript Users:</strong> " +
+          jsUsers
+            .map(function (user) {
+              return formatName(user.name);
+            })
+            .join(", ");
+
+        // -----------------------------
+        // SALARY
+        // -----------------------------
+
+        if (users.length > 0) {
+          var salaries = users.map(function (user) {
+            return Number(user.salary);
+          });
+
+          var totalSalary = 0;
+
+          for (var i = 0; i < salaries.length; i++) {
+            totalSalary = totalSalary + salaries[i];
+          }
+
+          var averageSalary = Math.round(totalSalary / salaries.length);
+
+          var highestSalary = salaries[0];
+
+          var lowestSalary = salaries[0];
+
+          for (var i = 1; i < salaries.length; i++) {
+            if (salaries[i] > highestSalary) {
+              highestSalary = salaries[i];
+            }
+
+            if (salaries[i] < lowestSalary) {
+              lowestSalary = salaries[i];
+            }
+          }
+
+          salaryText.innerHTML =
+            "<strong>Salary:</strong> Total = " +
+            totalSalary +
+            " | Average = " +
+            averageSalary +
+            " | Highest = " +
+            highestSalary +
+            " | Lowest = " +
+            lowestSalary;
+
+          // -----------------------------
+          // OLDEST USER
+          // -----------------------------
+
+          var oldestAge = 0;
+
+          var oldestName = "";
+
+          for (var i = 0; i < users.length; i++) {
+            var age = calculateAge(users[i].dob);
+
+            if (age > oldestAge) {
+              oldestAge = age;
+
+              oldestName = formatName(users[i].name);
+            }
+          }
+
+          oldestText.innerHTML =
+            "<strong>Oldest User:</strong> " +
+            oldestName +
+            " (" +
+            oldestAge +
+            " years)";
+        } else {
+          salaryText.innerHTML = "<strong>Salary:</strong> No users";
+
+          oldestText.innerHTML = "<strong>Oldest User:</strong> No users";
+        }
+      }
+
+      // ============================================================
+      // OPEN ADD MODAL
+      // ============================================================
+
+      function openAddModal() {
+        editingUserId = null;
+
+        modalTitle.innerHTML = "Add New User";
+
+        nameInput.value = "";
+
+        dobInput.value = "";
+
+        salaryInput.value = "";
+
+        // Uncheck every skill
+
+        var checkboxes = document.querySelectorAll(".skill-checkbox-input");
+
+        for (var i = 0; i < checkboxes.length; i++) {
+          checkboxes[i].checked = false;
+        }
+
+        modal.style.display = "flex";
+      }
+
+      // ============================================================
+      // OPEN UPDATE MODAL
+      // ============================================================
+
+      function openUpdateModal(userId) {
+        var userToUpdate = users.find(function (user) {
+          return user.id === userId;
+        });
+
+        if (!userToUpdate) {
+          return;
+        }
+
+        editingUserId = userId;
+
+        modalTitle.innerHTML = "Update User";
+
+        nameInput.value = userToUpdate.name.trim();
+
+        dobInput.value = userToUpdate.dob;
+
+        salaryInput.value = userToUpdate.salary;
+
+        // Set checkbox values
+
+        var checkboxes = document.querySelectorAll(".skill-checkbox-input");
+
+        for (var i = 0; i < checkboxes.length; i++) {
+          checkboxes[i].checked =
+            userToUpdate.skills.indexOf(checkboxes[i].value) !== -1;
+        }
+
+        modal.style.display = "flex";
+      }
+
+      // ============================================================
+      // GET SELECTED SKILLS
+      // ============================================================
+
+      function getSelectedSkills() {
+        var selectedSkills = [];
+
+        var checkboxes = document.querySelectorAll(".skill-checkbox-input");
+
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked) {
+            selectedSkills.push(checkboxes[i].value);
+          }
+        }
+
+        return selectedSkills;
+      }
+
+      // ============================================================
+      // SAVE USER
+      // ============================================================
+
+      saveButton.addEventListener("click", function () {
+        var name = nameInput.value.trim();
+
+        var dob = dobInput.value;
+
+        var salary = salaryInput.value.trim();
+
+        var selectedSkills = getSelectedSkills();
+
+        // Validation
+
+        if (name === "" || dob === "" || salary === "") {
+          alert("Please fill Name, Date of Birth and Salary.");
+
+          return;
+        }
+
+        if (selectedSkills.length === 0) {
+          alert("Please select at least one skill.");
+
+          return;
+        }
+
+        // ========================================================
+        // UPDATE EXISTING USER
+        // ========================================================
+
+        if (editingUserId !== null) {
+          var userToUpdate = users.find(function (user) {
+            return user.id === editingUserId;
+          });
+
+          if (userToUpdate) {
+            userToUpdate.name = name;
+
+            userToUpdate.dob = dob;
+
+            userToUpdate.salary = salary;
+
+            userToUpdate.skills = selectedSkills;
+          }
+        }
+
+        // ========================================================
+        // ADD NEW USER
+        // ========================================================
+        else {
+          var highestId = 0;
+
+          for (var i = 0; i < users.length; i++) {
+            if (users[i].id > highestId) {
+              highestId = users[i].id;
+            }
+          }
+
+          var newUser = {
+            id: highestId + 1,
+            name: name,
+            dob: dob,
+            salary: salary,
+            skills: selectedSkills,
+          };
+
+          users.push(newUser);
+        }
+
+        // Close modal
+
+        modal.style.display = "none";
+
+        // Re-render table
+
+        renderTable();
+      });
+
+      // ============================================================
+      // CANCEL MODAL
+      // ============================================================
+
+      cancelButton.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      // ============================================================
+      // ADD USER BUTTON
+      // ============================================================
+
+      addUserButton.addEventListener("click", function () {
+        openAddModal();
+      });
+
+      // ============================================================
+      // EVENT DELEGATION
+      // ============================================================
+      //
+      // Instead of adding click event to every Update/Delete
+      // button, we add ONE click listener to tbody.
+      //
+      // When a button is clicked:
+      //
+      // tbody
+      //   ↓
+      // event.target
+      //   ↓
+      // clicked button
+      //
+      // ============================================================
+
+      tbody.addEventListener("click", function (event) {
+        var clickedElement = event.target;
+
+        // Check if clicked element is a button
+
+        if (clickedElement.tagName !== "BUTTON") {
+          return;
+        }
+
+        var action = clickedElement.getAttribute("data-action");
+
+        var id = Number(clickedElement.getAttribute("data-id"));
+
+        // ========================================================
+        // UPDATE
+        // ========================================================
+
+        if (action === "update") {
+          openUpdateModal(id);
+        }
+
+        // ========================================================
+        // DELETE
+        // ========================================================
+
+        if (action === "delete") {
+          var userToDelete = users.find(function (user) {
+            return user.id === id;
+          });
+
+          if (!userToDelete) {
+            return;
+          }
+
+          var confirmation = confirm(
+            "Are you sure you want to delete " +
+              formatName(userToDelete.name) +
+              "?"
+          );
+
+          if (confirmation) {
+            users = users.filter(function (user) {
+              return user.id !== id;
+            });
+
+            renderTable();
+          }
+        }
+      });
+
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+
+      renderTable();
+    </script>
+  </body>
+</html>

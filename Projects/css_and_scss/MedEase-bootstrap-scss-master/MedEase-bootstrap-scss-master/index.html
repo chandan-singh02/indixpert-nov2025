@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>MedEase | Book Doctor Appointment online</title>
+    <meta
+      name="description"
+      content="MedEase will connect you to trusted doctors for online appointment booking, secure virtual consultations, and easy medical records management."
+    />
+    <meta
+      name="keywords"
+      content="online doctor appointment, book a doctor online, telehealth, virtual consultation, healthcare appointment app, find a doctor, cardiologist near me, medical records management, MedEase"
+    />
+    <meta
+      name="author"
+      content="MedEase"
+    />
+    <meta
+      name="robots"
+      content="index, follow"
+    />
+
+    <meta
+      property="og:title"
+      content="MedEase | Connecting You to Better Health"
+    />
+    <meta
+      property="og:description"
+      content="Book doctor appointmentss, join secure virtual consultations, and manage your health records — all in one place."
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+          <a
+            class="navbar-brand"
+            href="/"
+            aria-label="MedEase home"
+          >
+            <img
+              src="./src/assets/images/Logo.png"
+              alt=""
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse"
+            id="mainNav"
+          >
+            <ul class="navbar-nav mx-auto main-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#services"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#doctors"
+                  >Find a Doctor</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#about"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+            <a
+              href="#register"
+              class="btn btn-primary-pill nav-cta"
+              >Register</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section
+        class="hero"
+        id="home"
+      >
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+              <span class="badge-pill"
+                ><i
+                  class="icon-star"
+                  aria-hidden="true"
+                  >&#9733;</i
+                >
+                Rated #1 choice for healthcare appointments by users</span
+              >
+              <h1 class="hero__title">
+                Connecting You <em>to</em><br />Better Health
+              </h1>
+              <p class="hero__lead">
+                We're here to link you directly to improved health outcomes,
+                effortlessly connecting you with the care you need.
+              </p>
+              <div class="hero__actions">
+                <a
+                  href="#register"
+                  class="btn btn-primary-pill btn-lg"
+                  >Book Consultation</a
+                >
+                <a
+                  href="#about"
+                  class="btn btn-outline-pill btn-lg"
+                  >Learn More <span aria-hidden="true">&rarr;</span></a
+                >
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="hero__media">
+                <img
+                  src="./src/assets/images/image1.jpg"
+                  alt="Doctor taking a virtual consultation call on a laptop"
+                  width="900"
+                  height="700"
+                  loading="eager"
+                  class="hero__img"
+                />
+
+                <div class="floating-card floating-card--top">
+                  <strong>10K+</strong>
+                  <span>Hours Of Patient Meetings</span>
+                </div>
+
+                <div class="floating-card floating-card--bottom">
+                  <div
+                    class="avatar-stack"
+                    aria-hidden="true"
+                  >
+                    <img
+                      src="./src/assets/images/image2.jpg"
+                      alt=""
+                      width="28"
+                      height="28"
+                    />
+                    <img
+                      src="./src/assets/images/image3.png"
+                      alt=""
+                      width="28"
+                      height="28"
+                    />
+                    <img
+                      src="./src/assets/images/image8.jpg"
+                      alt=""
+                      width="28"
+                      height="28"
+                    />
+                  </div>
+                  <div>
+                    <strong>2.650+</strong>
+                    <span><br />patients have trusted us</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DOCTOR'S EXPERTISE ===== -->
+      <section
+        class="expertise"
+        id="services"
+      >
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Choose Doctor's <em>Expertise</em></h2>
+            <a
+              href="#doctors"
+              class="see-all d-none d-lg-inline-flex"
+              >See All <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+
+          <div class="swiper expertise-swiper">
+            <div class="swiper-wrapper">
+              <article class="swiper-slide">
+                <div class="doctor-card">
+                  <span class="doctor-card__icon">&#9829;</span>
+                  <h3>Cardiologist</h3>
+                  <p>
+                    Heart specialist focusing on cardiovascular health and
+                    diseases.
+                  </p>
+                  <a
+                    href="#register"
+                    class="link-arrow"
+                    >Book Consultation <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="doctor-card">
+                  <span class="doctor-card__icon">&#9878;</span>
+                  <h3>Neurologist</h3>
+                  <p>
+                    Doctor specializing in diagnosing and treating nervous
+                    system disorders.
+                  </p>
+                  <a
+                    href="#register"
+                    class="link-arrow"
+                    >Book Consultation <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="doctor-card">
+                  <span class="doctor-card__icon">&#9834;</span>
+                  <h3>ENT Specialist</h3>
+                  <p>
+                    Doctor specializing in ear, nose, and throat disorders and
+                    surgeries.
+                  </p>
+                  <a
+                    href="#register"
+                    class="link-arrow"
+                    >Book Consultation <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="doctor-card">
+                  <span class="doctor-card__icon">&#9877;</span>
+                  <h3>Pediatrician</h3>
+                  <p>
+                    Specialist in child health, growth and childhood illnesses.
+                  </p>
+                  <a
+                    href="#register"
+                    class="link-arrow"
+                    >Book Consultation <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="doctor-card">
+                  <span class="doctor-card__icon">&#129502;</span>
+                  <h3>Dermatologist</h3>
+                  <p>Specialist treating skin, hair and nail conditions.</p>
+                  <a
+                    href="#register"
+                    class="link-arrow"
+                    >Book Consultation <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="swiper-controls">
+            <button
+              class="swiper-btn expertise-prev"
+              aria-label="Previous doctors"
+            >
+              <span aria-hidden="true">&larr;</span>
+            </button>
+            <div class="swiper-pagination expertise-pagination"></div>
+            <button
+              class="swiper-btn swiper-btn--primary expertise-next"
+              aria-label="Next doctors"
+            >
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+
+          <a
+            href="#doctors"
+            class="btn btn-outline-pill see-more-mobile d-lg-none"
+            >See More <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </section>
+
+      <!--  STATS ===== -->
+      <section
+        class="team-stats"
+        id="about"
+      >
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-5">
+              <img
+                src="./src/assets/images/image2.jpg"
+                alt="MedEase team of doctors and nurses standing together"
+                width="700"
+                height="560"
+                loading="lazy"
+                class="team-stats__img"
+              />
+            </div>
+            <div class="col-lg-7">
+              <span class="badge-pill"
+                ><i
+                  class="icon-star"
+                  aria-hidden="true"
+                  >&#9733;</i
+                >
+                Rated #1 for appointments with many professional doctors</span
+              >
+              <p class="team-stats__lead">
+                We're revolutionizing healthcare with seamless access to trusted
+                professionals, prioritizing your journey to better health.
+              </p>
+
+              <div class="stat-row">
+                <div class="stat">
+                  <strong>40+</strong>
+                  <span>Dedicated Doctors</span>
+                </div>
+                <div class="stat">
+                  <strong>10K+</strong>
+                  <span>Hours of Patient Consultations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FEATURES ===== -->
+      <section class="features">
+        <div class="container">
+          <h2 class="section-title text-center">
+            Explore Our App's <em>Features</em>
+          </h2>
+          <div class="features-grid">
+            <div class="booking-wrapper">
+              <div class="feature-card">
+                <span class="feature-card__icon">&#128197;</span>
+
+                <h3>Convenient Online Booking</h3>
+
+                <p>
+                  Easily schedule consultations and meetings with healthcare
+                  professionals through our user-friendly online booking
+                  platform.
+                </p>
+              </div>
+
+              <div class="booking-phone">
+                <img
+                  src="./src/assets/images/image3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <span class="feature-card__icon">&#128272;</span>
+
+              <h3>Secure Virtual Meetings</h3>
+
+              <p>
+                Experience secure and convenient virtual consultations from
+                home. Our encrypted video conferencing removes the need for
+                in-person visits.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <span class="feature-card__icon">&#128196;</span>
+
+              <h3>Records Management</h3>
+
+              <p>
+                Effortlessly store and access patient medical records, ensuring
+                vital information is available during appointments.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <span class="feature-card__icon">&#9989;</span>
+
+              <h3>Instant Confirmation</h3>
+
+              <p>
+                Receive instant confirmation of your booked appointments, along
+                with timely reminders so you never miss a meeting.
+              </p>
+            </div>
+
+            <div class="video-wrapper">
+              <img
+                src="./src/assets/images/image4.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TESTIMONIALS ===== -->
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="section-title">
+            Testimonials From Our <em>Satisfied</em> Patients
+          </h2>
+
+          <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper">
+              <article class="swiper-slide">
+                <div class="testimonial-card">
+                  <img
+                    src="./src/assets/images/image5.png"
+                    alt="Portrait of David Panjaitan"
+                    width="220"
+                    height="240"
+                    loading="lazy"
+                    class="testimonial-card__photo"
+                  />
+                  <div class="testimonial-card__body">
+                    <p>
+                      "I've been using this site for a few months, and it's
+                      incredibly reliable. I appreciate the convenience of
+                      booking and canceling appointments anytime, anywhere."
+                    </p>
+                    <strong>David Panjaitan</strong>
+                    <span>Software Engineer</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="testimonial-card">
+                  <img
+                    src="./src/assets/images/image6.png"
+                    alt="Portrait of Ester Howard"
+                    width="220"
+                    height="240"
+                    loading="lazy"
+                    class="testimonial-card__photo"
+                  />
+                  <div class="testimonial-card__body">
+                    <p>
+                      "Managing appointments used to be complicated — now it's
+                      much easier to keep track of schedules in one place."
+                    </p>
+                    <strong>Ester Howard</strong>
+                    <span>Project Manager</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="testimonial-card">
+                  <img
+                    src="./src/assets/images/image5.png"
+                    alt="Portrait of Rian Saputra"
+                    width="220"
+                    height="240"
+                    loading="lazy"
+                    class="testimonial-card__photo"
+                  />
+                  <div class="testimonial-card__body">
+                    <p>
+                      "The virtual consultations saved me hours of travel.
+                      Booking a specialist now takes less than two minutes."
+                    </p>
+                    <strong>Rian Saputra</strong>
+                    <span>Teacher</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="swiper-controls">
+            <button
+              class="swiper-btn testimonials-prev"
+              aria-label="Previous testimonial"
+            >
+              <span aria-hidden="true">&larr;</span>
+            </button>
+            <div class="swiper-pagination testimonials-pagination"></div>
+            <button
+              class="swiper-btn swiper-btn--primary testimonials-next"
+              aria-label="Next testimonial"
+            >
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+
+          <a
+            href="#"
+            class="btn btn-outline-pill see-more-mobile d-lg-none"
+            >See More <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </section>
+
+      <!-- ===== BLOG ===== -->
+      <section class="blog">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">
+              Expert <em>Health</em> Advice and Updates
+            </h2>
+            <a
+              href="#"
+              class="see-all d-none d-lg-inline-flex"
+              >See All <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+
+          <div class="swiper blog-swiper">
+            <div class="swiper-wrapper">
+              <article class="swiper-slide">
+                <div class="blog-card">
+                  <img
+                    src="./src/assets/images/image8.jpg"
+                    alt="Fresh fruit bowl representing a healthy diet"
+                    width="500"
+                    height="340"
+                    loading="lazy"
+                  />
+                  <div class="blog-card__body">
+                    <span class="blog-card__meta"
+                      >Diet Tips &nbsp;&bull;&nbsp; 28 April 2024</span
+                    >
+                    <h3>Diet Tips for a Healthier Lifestyle</h3>
+                    <p>
+                      Maintaining a healthy diet is crucial for overall
+                      well-being and can prevent numerous health issues.
+                    </p>
+                    <a
+                      href="#"
+                      class="link-arrow"
+                      >Read More <span aria-hidden="true">&rarr;</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="blog-card">
+                  <img
+                    src="./src/assets/images/image9.jpg"
+                    alt="Doctor performing a routine health screening"
+                    width="500"
+                    height="340"
+                    loading="lazy"
+                  />
+                  <div class="blog-card__body">
+                    <span class="blog-card__meta"
+                      >Health Tips &nbsp;&bull;&nbsp; 21 April 2024</span
+                    >
+                    <h3>The Importance of Regular Health Screenings</h3>
+                    <p>
+                      Regular health screenings are essential for early
+                      detection and prevention of various health conditions.
+                    </p>
+                    <a
+                      href="#"
+                      class="link-arrow"
+                      >Read More <span aria-hidden="true">&rarr;</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="blog-card">
+                  <img
+                    src="./src/assets/images/image7.jpg"
+                    alt="Herbal tea and natural ingredients for immunity"
+                    width="500"
+                    height="340"
+                    loading="lazy"
+                  />
+                  <div class="blog-card__body">
+                    <span class="blog-card__meta"
+                      >Health Tips &nbsp;&bull;&nbsp; 14 April 2024</span
+                    >
+                    <h3>Boosting Your Immune System Naturally</h3>
+                    <p>
+                      A strong immune system is vital for fighting off
+                      infections and staying healthy. This article explores
+                      natural ways to boost it.
+                    </p>
+                    <a
+                      href="#"
+                      class="link-arrow"
+                      >Read More <span aria-hidden="true">&rarr;</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="swiper-slide">
+                <div class="blog-card">
+                  <img
+                    src="./src/assets/images/image7.jpg"
+                    alt="Person sleeping peacefully representing healthy sleep habits"
+                    width="500"
+                    height="340"
+                    loading="lazy"
+                  />
+                  <div class="blog-card__body">
+                    <span class="blog-card__meta"
+                      >Health Tips &nbsp;&bull;&nbsp; 09 April 2024</span
+                    >
+                    <h3>Living Well: Why Sleep Affects Everything</h3>
+                    <p>
+                      Sleep plays a critical role in physical and mental health
+                      — here's how to build better sleep habits.
+                    </p>
+                    <a
+                      href="#"
+                      class="link-arrow"
+                      >Read More <span aria-hidden="true">&rarr;</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="swiper-controls">
+            <button
+              class="swiper-btn blog-prev"
+              aria-label="Previous articles"
+            >
+              <span aria-hidden="true">&larr;</span>
+            </button>
+            <div class="swiper-pagination blog-pagination"></div>
+            <button
+              class="swiper-btn swiper-btn--primary blog-next"
+              aria-label="Next articles"
+            >
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+
+          <a
+            href="#"
+            class="btn btn-outline-pill see-more-mobile d-lg-none"
+            >See More <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </section>
+
+      <!-- ===== CTA ===== -->
+      <section
+        class="cta-banner"
+        id="register"
+      >
+        <img
+          src="./src/assets/images/image10.jpg"
+          alt=""
+          aria-hidden="true"
+          class="cta-banner__bg"
+          loading="lazy"
+        />
+        <div class="container">
+          <div class="cta-banner__content">
+            <h2>Start Your Health<br />Journey Here</h2>
+            <div class="hero__actions">
+              <a
+                href="#register"
+                class="btn btn-primary-pill btn-lg"
+                >Book Consultation Now</a
+              >
+              <a
+                href="#about"
+                class="btn btn-outline-pill btn-outline-pill--light btn-lg"
+                >Learn More <span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <a
+              class="navbar-brand"
+              href="/"
+              aria-label="MedEase home"
+            >
+              <img
+                src="./src/assets/images/Logo.png"
+                alt=""
+              />
+            </a>
+            <p class="site-footer__desc">
+              MedEase simplifies healthcare with an easy-to-use platform for
+              booking appointments, telehealth services, and managing patient
+              records.
+            </p>
+            <ul class="social-list">
+              <li>
+                <a
+                  href="#"
+                  aria-label="MedEase on Facebook"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="MedEase on Instagram"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.4.5.6.2 1 .5 1.5 1 .4.4.7.9 1 1.5.2.5.4 1.2.5 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.4-.3.6-.6 1-1 1.5-.4.4-.9.7-1.5 1-.5.2-1.2.4-2.4.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.4-.5-.6-.3-1-.6-1.5-1-.4-.4-.7-.9-1-1.5-.2-.5-.4-1.2-.5-2.4C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.4.2-.6.5-1 1-1.5.4-.4.9-.7 1.5-1 .5-.2 1.2-.4 2.4-.5C8.4 2.2 8.8 2.2 12 2.2m0 1.8c-3.1 0-3.5 0-4.7.1-1 0-1.6.2-1.9.4-.5.2-.8.4-1.2.7-.3.4-.5.7-.7 1.2-.1.3-.3.9-.4 1.9-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c0 1 .2 1.6.4 1.9.2.5.4.8.7 1.2.4.3.7.5 1.2.7.3.1.9.3 1.9.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1 0 1.6-.2 1.9-.4.5-.2.8-.4 1.2-.7.3-.4.5-.7.7-1.2.1-.3.3-.9.4-1.9.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-1-.2-1.6-.4-1.9-.2-.5-.4-.8-.7-1.2a3 3 0 0 0-1.2-.7c-.3-.1-.9-.3-1.9-.4-1.2-.1-1.6-.1-4.7-.1M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4m5.2-2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="MedEase on Twitter"
+                  ><svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.6 0-1.3-.2-1.8-.5v.1c0 2 1.4 3.6 3.3 4a4.2 4.2 0 0 1-1.9.1c.5 1.7 2.1 2.9 3.9 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1"
+                    /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-2 offset-lg-1">
+            <h4>Services</h4>
+            <ul class="footer-links">
+              <li><a href="#">Primary Care</a></li>
+              <li><a href="#">Specialist Care</a></li>
+              <li><a href="#">Mental Health Services</a></li>
+              <li><a href="#">Telehealth</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h4>Find a Doctor</h4>
+            <ul class="footer-links">
+              <li><a href="#">Top-Rated Doctors</a></li>
+              <li><a href="#">Appointment Scheduling</a></li>
+              <li><a href="#">Patient Reviews</a></li>
+              <li><a href="#">Doctor Profiles</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h4>About Us</h4>
+            <ul class="footer-links">
+              <li><a href="#">News and Updates</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community Involvement</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="/src/assets/js/main.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+
+* {
+   box-sizing: border-box; 
+  }
+
+html { 
+  scroll-behavior: smooth;
+ }
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-white);
+  overflow-x: hidden;
+}
+
+img {
+   max-width: 100%; height: auto; display: block;
+   }
+
+a { 
+  text-decoration: none;
+ }
+
+.container {
+   max-width: var(--container-max); 
+  }
+
+em {
+  font-style: italic; color: var(--color-primary); font-family: 'Georgia', serif; 
+}
+
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+
+.btn-primary-pill,
+.btn-outline-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85em 1.7em;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: var(--fs-body);
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-primary-pill {
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+
+  &:hover, &:focus-visible {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-white);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-outline-pill {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+
+  &:hover, &:focus-visible {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &--light {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: var(--color-white);
+
+    &:hover, &:focus-visible {
+      border-color: var(--color-white);
+      color: var(--color-white);
+    }
+  }
+}
+
+.see-more-mobile { margin: var(--gap) auto 0; display: flex; width: fit-content; }
+
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5em 1em;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+
+  .icon-star { color: #f5a623; font-style: normal; }
+}
+
+
+.section-title {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0;
+  color: var(--color-text);
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+.see-all {
+  font-weight: 600;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  &:hover { color: var(--color-primary-dark); }
+}
+
+.link-arrow {
+  font-weight: 600;
+  font-size: var(--fs-small);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  &:hover { color: var(--color-primary-dark); }
+}
+
+
+.avatar-stack {
+  display: flex;
+
+  img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+    margin-left: -8px;
+    object-fit: cover;
+
+    &:first-child { margin-left: 0; }
+  }
+}
+
+
+.swiper-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: var(--gap);
+}
+
+.swiper-btn {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &--primary {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+
+    &:hover, &:focus-visible { background: var(--color-primary-dark); }
+  }
+
+  &:not(&--primary):hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+  &.swiper-button-disabled { opacity: 0.4; pointer-events: none; }
+}
+
+.swiper-pagination {
+  position: static !important;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: var(--color-border);
+    opacity: 1;
+    margin: 0 !important;
+  }
+
+  .swiper-pagination-bullet-active { background: var(--color-primary); width: 22px; border-radius: 5px; }
+}

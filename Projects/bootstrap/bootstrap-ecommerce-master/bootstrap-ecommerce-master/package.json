@@ -1,0 +1,24 @@
+{
+  "name": "e-commerce-bootstrap",
+  "version": "1.0.0",
+  "description": "Ecommerce Website UI Kit - Paperpillar (Figma rebuild)",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass": "sass --watch src/assets/scss/main.scss:src/assets/css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.101.3",
+    "vite": "^8.1.5"
+  }
+}

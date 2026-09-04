@@ -1,0 +1,88 @@
+
+@media (max-width: 991.98px) {
+  .custom-navbar {
+    .navbar-collapse {
+      padding-top: 1rem;
+    }
+
+    .main-nav {
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .nav-cta { width: 100%; justify-content: center; }
+  }
+
+  .hero {
+    text-align: center;
+
+    &__lead { margin-inline: auto; }
+    &__actions { justify-content: center; }
+    &__media { margin-top: 1rem; max-width: 480px; margin-inline: auto; }
+  }
+
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .team-stats {
+    text-align: center;
+
+    &__lead { margin-inline: auto; }
+  }
+
+  .stat-row { justify-content: center; }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+
+  .feature-card--booking  { order: 1; }
+  .feature-phone--booking { display: none; }
+  .feature-card--records  { order: 2; }
+  .feature-card--video    { order: 3; }
+  .feature-phone--video   { order: 4; grid-row: auto; aspect-ratio: 3 / 4; }
+  .feature-card--instant  { order: 5; }
+
+  .testimonial-card {
+     flex-direction: column;
+     }
+  .testimonial-card__photo {
+     width: 100%; min-height: 220px; 
+    }
+
+  .cta-banner__content h2 {
+     font-size: var(--fs-h2); 
+    }
+}
+
+@media (max-width: 575.98px) {
+  .hero__actions,
+  .cta-banner .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn { width: 100%; text-align: center; justify-content: center; }
+  }
+
+  .floating-card--top { 
+    top: -1rem; right: 0;
+   }
+  .floating-card--bottom { 
+    left: 0.5rem; bottom: -1rem; 
+  }
+
+  .stat-row {
+     gap: 1.75rem;
+     }
+}
+
+
+@media (min-width: 992px) {
+  .expertise-swiper { overflow: visible; }
+}

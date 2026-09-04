@@ -1,0 +1,202 @@
+
+.inspire-card {
+  min-height: 280px;
+
+  img {
+    object-fit: cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    // background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 55%);
+  }
+
+  i {
+    width: 34px;
+    height: 34px;
+    // color: $primary-color;
+  }
+
+  span {
+    font-size: 30px;
+    color: #fcfcfc
+  }
+}
+
+.product-card {
+  .product-image {
+    height: 290px;
+    background: #f7f7f7;
+    border-radius: 24px;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+// .product-image.wide {
+//     height: 320px;
+// }
+
+// .product-image.wide img {
+//     object-fit: contain;
+// }
+  .fav {
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    color: $secondary-color;
+    cursor: pointer;
+
+    &.is-active,
+    &:hover {
+      color: $swatch-red;
+    }
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+}
+
+.trending-text{
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.swatch-pill {
+  padding: 8px 16px 8px 8px;
+  border: 1px solid $border-color;
+  font-size: 13px;
+  font-weight: 500;
+
+  .dot {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  &.clean .dot {
+    border: 1px solid $border-color;
+  }
+}
+
+
+.testimonial {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+}
+
+.testimonial img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-copy {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.testimonial::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+}
+.testimonial-copy , p{
+font-size:13px;
+// font-weight: 400;
+} 
+.testimonial-copy , h2{
+  font-weight: 400;
+  
+}
+.eyebrow {
+  font-size: 18px;
+}
+.role{
+  color: rgb(227, 227, 227);
+}
+
+.feature {
+  .icon-circle {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+
+.blog-post {
+  .blog-image {
+    aspect-ratio: 4 / 3;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .blog-copy {
+    h3 {
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+}
+
+
+
+.site-footer {
+  background: $footer-bg;
+  color: $footer-text;
+
+  a:hover {
+    color: $white;
+  }
+
+  .footer-about-text {
+    max-width: 280px;
+  }
+
+  .newsletter {
+    max-width: 320px;
+    border-color: rgba($white, 0.2) !important;
+
+    input {
+      color: $white;
+
+      &::placeholder {
+        color: $footer-text;
+      }
+    }
+  }
+
+  .footer-col ul li a {
+    color: $footer-text;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

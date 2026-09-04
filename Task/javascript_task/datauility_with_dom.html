@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Data Utility</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script>
+      // USER data
+      var users = [
+        {
+          id: 101,
+          name: "  alex JOHNSON ",
+          dob: "1992-06-15",
+          salary: "55000",
+          skills: ["html", "css", "javascript"],
+        },
+        {
+          id: 102,
+          name: "  maria  smith  ",
+          dob: "1988-11-03",
+          salary: "72000",
+          skills: ["react", "node", "css"],
+        },
+        {
+          id: 103,
+          name: "john doe",
+          dob: "1996-02-25",
+          salary: "48000",
+          skills: ["vue", "javascript", "html"],
+        },
+      ];
+
+      var app = document.getElementById("app");
+
+      // Main title
+      var tableTitle = document.createElement("h3");
+
+      tableTitle.innerHTML = "User Data Table";
+
+      tableTitle.style.color = "blue";
+
+      app.appendChild(tableTitle);
+
+      var line1 = document.createElement("hr");
+
+      app.appendChild(line1);
+
+      // TABLE
+
+      var table = document.createElement("table");
+
+      table.style.width = "100%";
+
+      // TABLE HEAD
+
+      var thead = document.createElement("thead");
+
+      var headerRow = document.createElement("tr");
+
+      var headers = ["Name", "DoB", "Age", "Salary", "Skills"];
+
+      for (var i = 0; i < headers.length; i++) {
+        var th = document.createElement("th");
+
+        th.innerHTML = headers[i];
+
+        th.style.border = "1px solid black";
+        th.style.padding = "10px";
+        th.style.textAlign = "left";
+        th.style.backgroundColor = "lightgray";
+
+        headerRow.appendChild(th);
+      }
+
+      thead.appendChild(headerRow);
+
+      table.appendChild(thead);
+
+      // TABLE BODY
+
+      var tbody = document.createElement("tbody");
+
+      table.appendChild(tbody);
+
+      app.appendChild(table);
+
+      // USER DATA UTILITY TITLE
+
+      var utilityTitle = document.createElement("h2");
+
+      utilityTitle.innerHTML = "User Data Utility";
+
+      utilityTitle.style.color = "blue";
+
+      app.appendChild(utilityTitle);
+
+      var line2 = document.createElement("hr");
+
+      app.appendChild(line2);
+
+      // TASK 1 HEADING
+
+      var task1Title = document.createElement("h3");
+
+      task1Title.innerHTML = "Task 1: String Operations";
+
+      task1Title.style.color = "green";
+
+      app.appendChild(task1Title);
+
+      var names = document.createElement("p");
+
+      app.appendChild(names);
+
+      // TASK 1
+
+      var formattedNames = users.map(function (user) {
+        var name = user.name.trim().toLowerCase();
+
+        var words = name.split(/\s+/);
+        // console.log("words", words);
+
+        var newWords = words.map(function (word) {
+          return word[0].toUpperCase() + word.slice(1);
+        });
+        // console.log("newords", newWords);
+        return newWords.join(" ");
+      });
+
+      names.innerHTML =
+        "<b>Formatted Names---->></b> " + formattedNames.join(", ");
+
+      // TASK 2 HEADING
+
+      var task2Title = document.createElement("h3");
+
+      task2Title.innerHTML = "Task 2: Array Operations";
+
+      task2Title.style.color = "green";
+
+      app.appendChild(task2Title);
+
+      var skills = document.createElement("p");
+
+      var jsUsersText = document.createElement("p");
+
+      app.appendChild(skills);
+
+      app.appendChild(jsUsersText);
+
+      // TASK 2
+
+      var allSkills = [];
+
+      for (var i = 0; i < users.length; i++) {
+        for (var j = 0; j < users[i].skills.length; j++) {
+          allSkills.push(users[i].skills[j]);
+        }
+      }
+      console.log(allSkills);
+      var uniqueSkills = ["html", "css"];
+
+      for (var i = 0; i < allSkills.length; i++) {
+        if (uniqueSkills.indexOf(allSkills[i]) === -1) {
+          uniqueSkills.push(allSkills[i]);
+        }
+      }
+
+      uniqueSkills.sort();
+
+      var jsUsers = users.filter(function (user) {
+        return user.skills.indexOf("javascript") !== -1;
+      });
+
+      skills.innerHTML = "<b>Unique Skills:</b> " + uniqueSkills.join(", ");
+
+      jsUsersText.innerHTML = "<b>JavaScript Users:</b> " + jsUsers.length;
+
+      // TASK 3 HEADING
+
+      var task3Title = document.createElement("h3");
+
+      task3Title.innerHTML = "Task 3: Number Operations";
+
+      task3Title.style.color = "green";
+
+      app.appendChild(task3Title);
+
+      var salaryText = document.createElement("p");
+
+      app.appendChild(salaryText);
+
+      // TASK 3
+
+      var salaries = users.map(function (user) {
+        return Number(user.salary);
+      });
+
+      var totalSalary = 0;
+
+      for (var i = 0; i < salaries.length; i++) {
+        totalSalary = totalSalary + salaries[i];
+      }
+
+      var averageSalary = Math.round(totalSalary / salaries.length);
+
+      var highestSalary = salaries[0];
+
+      var lowestSalary = salaries[0];
+
+      for (var i = 1; i < salaries.length; i++) {
+        if (salaries[i] > highestSalary) {
+          highestSalary = salaries[i];
+        }
+
+        if (salaries[i] < lowestSalary) {
+          lowestSalary = salaries[i];
+        }
+      }
+
+      salaryText.innerHTML =
+        "<b>Average:</b> " +
+        averageSalary +
+        " | <b>Highest:</b> " +
+        highestSalary +
+        " | <b>Lowest:</b> " +
+        lowestSalary;
+
+      // TASK 4 HEADING
+
+      var task4Title = document.createElement("h3");
+
+      task4Title.innerHTML = "Task 4: Date Operations";
+
+      task4Title.style.color = "green";
+
+      app.appendChild(task4Title);
+
+      var oldestText = document.createElement("p");
+
+      app.appendChild(oldestText);
+
+      // TASK 4
+
+      var today = new Date();
+
+      var usersWithAge = users.map(function (user) {
+        var dob = new Date(user.dob);
+
+        var age = today.getFullYear() - dob.getFullYear();
+
+        var monthDifference = today.getMonth() - dob.getMonth();
+
+        if (
+          monthDifference < 0 ||
+          (monthDifference === 0 && today.getDate() < dob.getDate())
+        ) {
+          age--;
+        }
+
+        return {
+          name: user.name,
+          age: age,
+          dob: dob,
+        };
+      });
+      console.log(usersWithAge);
+      var oldestAge = 0;
+
+      var oldestName = "";
+
+      for (var i = 0; i < usersWithAge.length; i++) {
+        if (usersWithAge[i].age > oldestAge) {
+          oldestAge = usersWithAge[i].age;
+
+          oldestName = usersWithAge[i].name.trim().toLowerCase();
+        }
+      }
+
+      oldestText.innerHTML =
+        "<b>Oldest User:</b> " + oldestName + " | <b>Age:</b> " + oldestAge;
+
+      usersWithAge.forEach(function (user, index) {
+        var row = document.createElement("tr");
+
+        var nameCell = document.createElement("td");
+
+        var dobCell = document.createElement("td");
+
+        var ageCell = document.createElement("td");
+
+        var salaryCell = document.createElement("td");
+
+        var skillsCell = document.createElement("td");
+
+        var words = user.name.trim().toLowerCase().split(/\s+/);
+
+        var newWords = words.map(function (word) {
+          return word.charAt(0).toUpperCase() + word.slice(1);
+        });
+
+        var formattedName = newWords.join(" ");
+
+        var formattedDob = user.dob.toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "short",
+          year: "numeric",
+        });
+
+        nameCell.innerHTML = formattedName;
+
+        dobCell.innerHTML = formattedDob;
+
+        ageCell.innerHTML = user.age;
+
+        salaryCell.innerHTML = Number(users[index].salary);
+
+        skillsCell.innerHTML = users[index].skills.join(", ");
+
+        row.appendChild(nameCell);
+
+        row.appendChild(dobCell);
+
+        row.appendChild(ageCell);
+
+        row.appendChild(salaryCell);
+
+        row.appendChild(skillsCell);
+
+        // Add row to table
+        tbody.appendChild(row);
+      });
+    </script>
+  </body>
+</html>

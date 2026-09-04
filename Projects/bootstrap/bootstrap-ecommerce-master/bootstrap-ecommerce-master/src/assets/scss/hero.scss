@@ -1,0 +1,57 @@
+
+
+.summer-card {
+  min-height: 460px;
+  background: $sage-green;
+
+  img {
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    opacity: 0.92;
+  }
+
+  .summer-copy {
+    max-width: 280px;
+
+    h1 {
+      font-size: 46px;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+  }
+}
+
+.side-card {
+  min-height: 160px;
+  background: $gray-bg;
+
+  img {
+    object-fit: cover;
+  }
+
+  span {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    line-height: 1.25;
+    letter-spacing: -3px;
+    color: $primary-color;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .summer-card {
+    min-height: 340px;
+
+    .summer-copy h1 {
+      font-size: 32px;
+    }
+  }
+}

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Ecommerce &ndash; Fashion Store</title>
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- TOPBAR -->
+    <div
+      class="topbar container d-flex justify-content-between align-items-center py-2 mt-4"
+    >
+      <div class="topbar-left d-flex align-items-center gap-3">
+        <span>English</span>
+        <span>Dollar</span>
+      </div>
+      <div class="topbar-right d-flex align-items-center gap-4">
+        <a href="#">Tracking Package</a>
+        <a href="#">FAQ</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header
+      class="header container d-flex align-items-center justify-content-between py-4"
+    >
+      <a
+        class="brand fs-4 fw-bold"
+        href="#"
+        >ECOMMERCE</a
+      >
+
+      <label
+        class="search position-relative flex-grow-1 mx-4 d-none d-md-block"
+      >
+        <input
+          type="text"
+          class="form-control rounded-pill ps-3 pe-5"
+          placeholder="Search here"
+        />
+        <i class="bi bi-search"></i>
+      </label>
+
+      <nav class="d-none d-md-flex align-items-center gap-4">
+        <div class="dropdown">
+          <a
+            href="#"
+            class="dropdown-toggle d-flex align-items-center gap-1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            All Category
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                >Shoes</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                >T-Shirt</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                >Jackets</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                >Hat</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="#"
+                >Accessories</a
+              >
+            </li>
+          </ul>
+        </div>
+        <a href="#">Gift Cards</a>
+        <a href="#">Special Event</a>
+      </nav>
+
+      <div class="icons d-none d-md-flex align-items-center gap-3">
+        <a href="#"><i class="bi bi-heart"></i></a>
+        <a href="#"><i class="bi bi-person"></i></a>
+        <a href="#"><i class="bi bi-bag"></i></a>
+      </div>
+
+      <button
+        class="menu-toggle btn d-md-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileNav"
+        aria-controls="mobileNav"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+    </header>
+
+    <!-- MOBILE NAV (Bootstrap Offcanvas) -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="mobileNav"
+      aria-labelledby="mobileNavLabel"
+    >
+      <div class="offcanvas-header">
+        <h5
+          class="offcanvas-title"
+          id="mobileNavLabel"
+        >
+          ECOMMERCE
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column gap-4">
+        <label class="search position-relative">
+          <input
+            type="text"
+            class="form-control rounded-pill ps-3 pe-5"
+            placeholder="Search here"
+          />
+          <i class="bi bi-search"></i>
+        </label>
+
+        <nav class="d-flex flex-column gap-3 fw-semibold">
+          <a href="#">All Category</a>
+          <a href="#">Gift Cards</a>
+          <a href="#">Special Event</a>
+        </nav>
+
+        <div class="icons d-flex align-items-center gap-3 fw-semibold">
+          <a href="#"><i class="bi bi-heart"></i></a>
+          <a href="#"><i class="bi bi-person"></i></a>
+          <a href="#"><i class="bi bi-bag"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container container1">
+          <div class="row g-4 pt-4">
+            <div class="col-lg-8">
+              <article
+                class="summer-card position-relative overflow-hidden rounded-4 text-white h-100"
+              >
+                <img
+                  src="./assets/images/image 3.png"
+                  class="w-100 h-100"
+                  alt="Color of Summer Outfit"
+                />
+                <div
+                  class="summer-copy position-absolute top-0 start-0 p-4 p-sm-5"
+                >
+                  <h1>Color of Summer Outfit</h1>
+                  <p>
+                    100+ Collections for your outfit inspirations in this
+                    summer.
+                  </p>
+                  <a
+                    href="#trending"
+                    class="btn btn-dark rounded-pill px-4 py-3"
+                    >View Collections</a
+                  >
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="row row-cols-2 row-cols-lg-1 g-4 h-100">
+                <div class="col">
+                  <article
+                    class="side-card position-relative overflow-hidden rounded-4 h-100"
+                  >
+                    <span class="fw-normal">Outdoor<br />Active</span>
+                    <img
+                      src="./assets/images/image 4.png"
+                      class="w-100 h-100"
+                      alt="Outdoor Active"
+                    />
+                  </article>
+                </div>
+                <div class="col">
+                  <article
+                    class="side-card position-relative overflow-hidden rounded-4 h-100"
+                  >
+                    <span class="fw-normal"
+                      >Casual<br />
+                      Comfort</span
+                    >
+                    <img
+                      src="./assets/images/image 5.png"
+                      class="w-100 h-100"
+                      alt="Casual Comfort"
+                    />
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASUAL INSPIRATIONS -->
+      <section class="inspirations">
+        <div class="container">
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-4">
+              <div
+                class="intro d-flex flex-column justify-content-center h-100"
+              >
+                <h2 class="section-heading mb-3">Casual<br />Inspirations</h2>
+                <p class="text-secondary mb-4">
+                  Our favorite combinations for casual outfit that can inspire
+                  you to apply on your daily activity.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-outline-dark rounded-pill px-4 py-3 align-self-start"
+                  >Browse Inspirations</a
+                >
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <article
+                class="inspire-card position-relative overflow-hidden rounded-4 h-100"
+              >
+                <img
+                  src="./assets/images/image 7.png"
+                  class="w-100 h-100"
+                  alt="Say it with Shirt"
+                />
+                <i
+                  class="bi bi-arrow-up-right position-absolute top-0 end-0 m-3 rounded-circle bg-white d-flex align-items-center justify-content-center"
+                ></i>
+                <span class="position-absolute bottom-0 start-0 m-3 fw-normal"
+                  >Say it<br />with Shirt</span
+                >
+              </article>
+            </div>
+
+            <div class="col-lg-4">
+              <article
+                class="inspire-card position-relative overflow-hidden rounded-4 h-100"
+              >
+                <img
+                  src="./assets/images/image 8.png"
+                  alt="Funky never get old"
+                  class="w-100 h-100"
+                />
+                <i
+                  class="bi bi-arrow-up-right position-absolute top-0 end-0 m-3 rounded-circle bg-white d-flex align-items-center justify-content-center"
+                ></i>
+                <span class="position-absolute bottom-0 start-0 m-3 fw-normal"
+                  >Funky never <br />
+                  get old</span
+                >
+              </article>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </section>
+
+      <!-- TRENDING -->
+      <section
+        id="trending"
+        class="trending"
+      >
+        <div class="container">
+          <div
+            class="trending-head d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3"
+          >
+            <h2 class="trending-text">Trending</h2>
+
+            <div class="filters d-flex flex-wrap justify-content-end gap-2">
+              <input
+                type="radio"
+                class="btn-check"
+                name="trending-filter"
+                id="filter-shorts"
+                autocomplete="off"
+              />
+              <label
+                class="btn btn-outline-dark rounded-pill"
+                for="filter-shorts"
+                >Shorts</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="trending-filter"
+                id="filter-hat"
+                autocomplete="off"
+              />
+              <label
+                class="btn btn-outline-dark rounded-pill"
+                for="filter-hat"
+                >Hat</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="trending-filter"
+                id="filter-jackets"
+                autocomplete="off"
+              />
+              <label
+                class="btn btn-outline-dark rounded-pill"
+                for="filter-jackets"
+                >Jackets</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="trending-filter"
+                id="filter-shoes"
+                autocomplete="off"
+                checked
+              />
+              <label
+                class="btn btn-outline-dark rounded-pill"
+                for="filter-shoes"
+                >Shoes</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="trending-filter"
+                id="filter-tshirt"
+                autocomplete="off"
+              />
+              <label
+                class="btn btn-outline-dark rounded-pill"
+                for="filter-tshirt"
+                >T-Shirt</label
+              >
+            </div>
+          </div>
+
+          <div class="row g-5">
+            <div class="col-6 col-md-3">
+              <article class="product-card">
+                <div
+                  class="product-image position-relative overflow-hidden rounded-4 bg-light mb-3"
+                >
+                  <img
+                    src="./assets/images/image 9.png"
+                    class="w-100 h-100"
+                    alt="Casual Shoe"
+                  />
+                  <span
+                    class="fav is-active position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-heart-fill"></i
+                  ></span>
+                </div>
+                <h3 class="fw-semibold mb-1">Casual Shoe</h3>
+                <span class="price text-secondary">$225</span>
+              </article>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <article class="product-card">
+                <div
+                  class="product-image position-relative overflow-hidden rounded-4 bg-light mb-3"
+                >
+                  <img
+                    src="./assets/images/image 11.png"
+                    class="w-100 h-100"
+                    alt="Skateboard Shoe"
+                  />
+                  <span
+                    class="fav position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-heart"></i
+                  ></span>
+                </div>
+                <h3 class="fw-semibold mb-1">Skateboard Shoe</h3>
+                <span class="price text-secondary">$125</span>
+              </article>
+            </div>
+
+            <div class="col-6 col-md-6">
+              <article class="product-card">
+                <div
+                  class="product-image position-relative overflow-hidden rounded-4 bg-light mb-3"
+                >
+                  <img
+                    src="./assets/images/image 14.png"
+                    class="w-100 h-100"
+                    alt="Skateboard Shoe"
+                  />
+                  <span
+                    class="fav position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-heart"></i
+                  ></span>
+                </div>
+                <h3 class="fw-semibold mb-1">Skateboard Shoe</h3>
+                <span class="price text-secondary">$125</span>
+              </article>
+            </div>
+
+            <div class="col-6 col-md-6">
+              <article class="product-card">
+                <div
+                  class="product-image position-relative overflow-hidden rounded-4 bg-light mb-3"
+                >
+                  <img
+                    src="./assets/images/image 15.png"
+                    class="w-100 h-100"
+                    alt="Skateboard Shoe"
+                  />
+                  <span
+                    class="fav position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-heart"></i
+                  ></span>
+                </div>
+                <h3 class="fw-semibold mb-1">Skateboard Shoe</h3>
+                <span class="price text-secondary">$225</span>
+              </article>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <article class="product-card">
+                <div
+                  class="product-image position-relative overflow-hidden rounded-4 bg-light mb-3"
+                >
+                  <img
+                    src="./assets/images/image 12.png"
+                    class="w-100 h-100"
+                    alt="Basket Shoe"
+                  />
+                  <span
+                    class="fav position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-heart"></i
+                  ></span>
+                </div>
+                <h3 class="fw-semibold mb-1">Basket Shoe</h3>
+                <span class="price text-secondary">$125</span>
+              </article>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <article class="product-card">
+                <div
+                  class="product-image position-relative overflow-hidden rounded-4 bg-light mb-3"
+                >
+                  <img
+                    src="./assets/images/image 13.png"
+                    class="w-100 h-100"
+                    alt="Sportwear Shoe"
+                  />
+                  <span
+                    class="fav position-absolute rounded-circle bg-white d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-heart"></i
+                  ></span>
+                </div>
+                <h3 class="fw-semibold mb-1">Sportwear Shoe</h3>
+                <span class="price text-secondary">$159</span>
+              </article>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </section>
+
+      <!-- EXPLORE BY COLORS -->
+      <section class="colors">
+        <div class="container mb-5">
+          <div
+            class="colors-head d-flex flex-wrap justify-content-between align-items-start gap-4 mb-5"
+          >
+            <h2 class="section-heading">Explore<br />by Colors</h2>
+            <div
+              class="swatch-grid d-flex flex-wrap gap-2"
+              style="max-width: 560px"
+            >
+              <span
+                class="swatch-pill d-flex align-items-center gap-2 rounded-pill"
+                ><i
+                  class="dot rounded-circle"
+                  style="background: #e4685d"
+                ></i
+                >Red Pastel</span
+              >
+              <span
+                class="swatch-pill d-flex align-items-center gap-2 rounded-pill"
+                ><i
+                  class="dot rounded-circle"
+                  style="background: #a6ce39"
+                ></i
+                >Lime Green</span
+              >
+              <span
+                class="swatch-pill d-flex align-items-center gap-2 rounded-pill"
+                ><i
+                  class="dot rounded-circle"
+                  style="background: #22315c"
+                ></i
+                >Navy Blue</span
+              >
+              <span
+                class="swatch-pill clean d-flex align-items-center gap-2 rounded-pill"
+                ><i
+                  class="dot rounded-circle"
+                  style="background: #fff"
+                ></i
+                >Clean White</span
+              >
+              <span
+                class="swatch-pill d-flex align-items-center gap-2 rounded-pill"
+                ><i
+                  class="dot rounded-circle"
+                  style="background: #6fb8e8"
+                ></i
+                >Blue Sky</span
+              >
+              <span
+                class="swatch-pill d-flex align-items-center gap-2 rounded-pill"
+                ><i
+                  class="dot rounded-circle"
+                  style="background: #8e5fc7"
+                ></i
+                >Purple</span
+              >
+              <span
+                class="swatch-pill d-flex align-items-center gap-2 rounded-pill"
+                ><i
+                  class="dot rounded-circle"
+                  style="background: #e8578f"
+                ></i
+                >Pink</span
+              >
+              <span
+                class="swatch-pill d-flex align-items-center gap-2 rounded-pill"
+                ><i
+                  class="dot rounded-circle"
+                  style="background: #f3c53c"
+                ></i
+                >Yellow</span
+              >
+              <span
+                class="swatch-pill d-flex align-items-center gap-2 rounded-pill"
+                ><i
+                  class="dot rounded-circle"
+                  style="background: #2f6b3e"
+                ></i
+                >Dark Green</span
+              >
+            </div>
+          </div>
+
+          <article
+            class="testimonial position-relative overflow-hidden rounded-4"
+          >
+            <img
+              src="./assets/images/image 16.png"
+              class="w-100"
+              alt="Samantha William"
+            />
+            <div
+              class="testimonial-copy position-relative text-white p-4 p-sm-5"
+            >
+              <p class="eyebrow">What people said</p>
+              <h2 class="mb-3">
+                Love the way they handle <br />
+                the order.
+              </h2>
+              <p>
+                Very professional and friendly at the same time. <br />They
+                packed the order on schedule and the detail of their wrapping is
+                top notch.<br />
+                One of my best experience for buying online items.<br />
+                Surely will come back for another purchase.
+              </p>
+              <p class="author fw-bold mb-0">Samantha William</p>
+              <p class="role">Fashion Enthusiast</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- WHY SHOP WITH US -->
+      <section class="features">
+        <div class="container">
+          <h2 class="section-heading mb-5">
+            Why you'll love to<br />shop on our website
+          </h2>
+          <div class="row row-cols-1 row-cols-lg-3 g-5">
+            <div class="col">
+              <div class="feature">
+                <span
+                  class="icon-circle rounded-circle bg-dark text-white d-flex align-items-center justify-content-center mb-3"
+                >
+                  <i class="bi bi-heart-fill"></i>
+                </span>
+                <h3 class="fw-bold mb-2">Take care with love</h3>
+                <p class="text-secondary mb-0">
+                  We take care your package with full of attention and of course
+                  full of love. We want to make sure you'll receive your package
+                  like you receive your birthday gift.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="feature">
+                <span
+                  class="icon-circle rounded-circle bg-dark text-white d-flex align-items-center justify-content-center mb-3"
+                >
+                  <i class="bi bi-telephone-fill"></i>
+                </span>
+                <h3 class="fw-bold mb-2">Friendly Customer Service</h3>
+                <p class="text-secondary mb-0">
+                  You do not need to worry when you want to check your package.
+                  We will always answer whatever your questions. Just click on
+                  the chat icon and we will talk.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="feature">
+                <span
+                  class="icon-circle rounded-circle bg-dark text-white d-flex align-items-center justify-content-center mb-3"
+                >
+                  <i class="bi bi-arrow-repeat"></i>
+                </span>
+                <h3 class="fw-bold mb-2">Refund Process</h3>
+                <p class="text-secondary mb-0">
+                  Refund is a such bad experience and we don't want that thing
+                  happen to you. But when it's happen we will make sure you will
+                  through smooth and friendly process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section class="blog">
+        <div class="container mb-5 mt-5">
+          <h2 class="section-heading mb-4">From The Blog</h2>
+          <article class="blog-post row g-5 align-items-center">
+            <div class="col-md-6">
+              <div class="blog-image rounded-4 overflow-hidden">
+                <img
+                  src="./assets/images/image 18.png"
+                  class="w-100 h-100"
+                  alt="Outfit rack"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="blog-copy">
+                <h3 class="mb-3">
+                  How to combine your daily outfit to looks fresh and cool.
+                </h3>
+                <p class="text-secondary mb-4">
+                  Maybe you don't need to buy new clothes to have nice, cool,
+                  fresh looking outfit everyday. Maybe what you need is to
+                  combine your clothes collections. Mix and match is the key.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-outline-dark rounded-pill px-4 py-3"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <a
+              class="brand fs-5 fw-bold mb-3 d-inline-block text-white"
+              href="#"
+              >ECOMMERCE</a
+            >
+            <p class="footer-about-text mb-4">
+              Ecommerce is a free UI Kit from Paperpillar that you can use for
+              your personal or commercial project.
+            </p>
+            <form
+              class="newsletter newsletter-form d-flex align-items-center rounded-pill border p-1"
+            >
+              <input
+                type="email"
+                class="form-control form-control-sm bg-transparent border-0 shadow-none"
+                placeholder="Type your email address"
+                required
+              />
+              <button
+                type="submit"
+                class="btn btn-light rounded-pill px-4"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="row row-cols-2 row-cols-md-3 g-4">
+              <div class="col footer-col">
+                <h4 class="text-white fw-bold mb-3">Popular</h4>
+                <ul class="list-unstyled">
+                  <li class="mb-3"><a href="#">Shoes</a></li>
+                  <li class="mb-3"><a href="#">T-Shirt</a></li>
+                  <li class="mb-3"><a href="#">Jackets</a></li>
+                  <li class="mb-3"><a href="#">Hat</a></li>
+                  <li class="mb-3"><a href="#">Accessories</a></li>
+                </ul>
+              </div>
+
+              <div class="col footer-col">
+                <h4 class="text-white fw-bold mb-3">Menu</h4>
+                <ul class="list-unstyled">
+                  <li class="mb-3"><a href="#">All Category</a></li>
+                  <li class="mb-3"><a href="#">Gift Cards</a></li>
+                  <li class="mb-3"><a href="#">Special Events</a></li>
+                  <li class="mb-3"><a href="#">Testimonial</a></li>
+                  <li class="mb-3"><a href="#">Blog</a></li>
+                </ul>
+              </div>
+
+              <div class="col footer-col">
+                <h4 class="text-white fw-bold mb-3">Other</h4>
+                <ul class="list-unstyled">
+                  <li class="mb-3"><a href="#">Tracking Package</a></li>
+                  <li class="mb-3"><a href="#">FAQ</a></li>
+                  <li class="mb-3"><a href="#">About Us</a></li>
+                  <li class="mb-3"><a href="#">Contact Us</a></li>
+                  <li class="mb-3"><a href="#">Terms and Conditions</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="./assets/js/main.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+
+.container {
+  // --bs-gutter-x: #{$container-padding * 2};
+
+  @include media-breakpoint-down(lg) {
+    --bs-gutter-x: #{$container-padding-md * 2};
+  }
+
+  @include media-breakpoint-down(sm) {
+    --bs-gutter-x: #{$container-padding-sm * 2};
+  }
+}
+
+
+section {
+  padding-block: $section-padding;
+
+  @include media-breakpoint-down(lg) {
+    padding-block: 44px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-block: 48px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-block: 40px;
+  }
+}
+
+.section-heading {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.eyebrow {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: $secondary-color;
+}

@@ -1,0 +1,46 @@
+
+
+$font-family: 'Inter', sans-serif;
+
+
+$primary-color: #171717;      // main body text / headings
+$secondary-color: #6b6b6b;    // paragraph / muted text
+$white: #ffffff;
+$black: #000000;
+
+$sage-green: #8b9574;         
+$sage-green-dark: #6f7a5c;
+
+$border-color: #e7e7e7;
+$gray-bg: #f4f4f4;
+$footer-bg: #171717;
+$footer-text: #b7b7b7;
+
+
+$swatch-red: #e4685d;
+$swatch-lime: #a6ce39;
+$swatch-navy: #22315c;
+$swatch-white: #ffffff;
+$swatch-sky: #6fb8e8;
+$swatch-purple: #8e5fc7;
+$swatch-pink: #e8578f;
+$swatch-yellow: #f3c53c;
+$swatch-green: #2f6b3e;
+
+// Layout
+$container-max: 1320px;
+$container-padding: 30px;
+$container-padding-md: 24px;
+$container-padding-sm: 16px;
+$section-padding: 5px;
+
+// Radius
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+
+// Breakpoints
+$bp-xl: 1200px;
+$bp-lg: 992px;
+$bp-md: 768px;
+$bp-sm: 576px;

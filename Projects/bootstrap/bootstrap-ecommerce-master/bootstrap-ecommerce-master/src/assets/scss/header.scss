@@ -1,0 +1,41 @@
+
+.topbar {
+  border-bottom: 1px solid $border-color;
+  font-size: 13px;
+  color: $secondary-color;
+
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+.header {
+  .search {
+    position: relative;
+    flex: 1;
+    max-width: 340px;
+
+    input:focus {
+      border-color: $primary-color;
+      box-shadow: none;
+    }
+
+    i {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $secondary-color;
+      pointer-events: none;
+    }
+  }
+
+  nav a:hover,
+  .icons a:hover {
+    color: $sage-green-dark;
+  }
+
+  .dropdown-menu {
+    --bs-dropdown-min-width: 12rem;
+  }
+}

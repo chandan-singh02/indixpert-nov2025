@@ -1,0 +1,31 @@
+
+$font-family-sans-serif: $font-family;
+$body-color: $primary-color;
+$body-bg: $white;
+$link-color: $primary-color;
+$link-decoration: none;
+
+
+$primary: $primary-color;
+$secondary: $secondary-color;
+$dark: $black;
+$light: $gray-bg;
+
+
+$border-radius: $radius-sm;   // 8px  -> rounded-2
+$border-radius-lg: $radius-md; // 16px -> rounded-3
+$border-radius-xl: $radius-lg; // 24px -> rounded-4
+
+
+$border-color: $border-color;
+
+
+$btn-font-weight: 500;
+
+
+$input-border-color: $border-color;
+$input-focus-border-color: $primary-color;
+$input-focus-box-shadow: none;
+
+
+$enable-negative-margins: true;

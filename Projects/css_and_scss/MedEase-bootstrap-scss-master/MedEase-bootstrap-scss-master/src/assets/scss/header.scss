@@ -1,0 +1,38 @@
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.custom-navbar {
+  padding-block: 1rem;
+
+  .navbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
+    font-size: var(--fs-h3);
+    color: var(--color-primary);
+  }
+
+  .main-nav {
+    gap: clamp(1rem, 1.5vw, 2.25rem);
+
+    .nav-link {
+      font-weight: 600;
+      font-size: var(--fs-body);
+      color: var(--color-muted);
+      padding: 0.4rem 0;
+
+      &.active{color:var(--color-primary)}
+      &:hover,
+      &:focus-visible { color: var(--color-text); }
+    }
+  }
+
+  .nav-cta { flex: 0 0 auto; }
+}
