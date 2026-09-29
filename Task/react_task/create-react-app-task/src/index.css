@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  background: #fae3e3;
 }
 
 #root {
@@ -57,4 +57,269 @@ header p {
   text-align: center;
   color: #888;
   font-size: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(134, 134, 134);
+    color: #222;
+}
+
+
+/* ================= STATIC ================= */
+
+.static-section {
+    text-align: center;
+    padding: 35px 20px 25px;
+}
+
+.static-section h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #999;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.static-card {
+    width: 530px;
+    margin: auto;
+    padding: 25px 30px 30px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.static-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.static-card h2 {
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.static-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.static-card p {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #777;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* ================= DYNAMIC ================= */
+
+.dynamic-section {
+    margin-top: 20px;
+    padding: 60px 20px 50px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.dynamic-section h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.dynamic-container {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 35px;
+}
+
+.dynamic-card {
+    width: 290px;
+    min-height: 250px;
+    padding: 25px 20px;
+    background-color: white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.dynamic-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.dynamic-card h2 {
+    margin-top: 12px;
+    font-size: 21px;
+}
+
+.dynamic-card h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.dynamic-card p {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #777;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+    .dynamic-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .static-card {
+        width: 90%;
+    }
+}
+
+/* TASK 2 - COUNTER */
+
+.counter-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.counter-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.counter-value {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.counter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.counter-buttons button {
+    padding: 10px 16px;
+    background: white;
+    border: 1px solid #222;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.counter-buttons button:hover {
+    background: #222;
+    color: white;
+}
+
+.counter-message {
+    margin-top: 20px;
+    color: red;
+    font-size: 15px;
+}
+
+/* ROUTING LAYOUT */
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+    padding: 35px 20px;
+    background-color: white;
+    border-right: 1px solid #ddd;
+    box-shadow: px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #929191;
+    color: rgb(255, 255, 255);
+}
+
+
+/* CONTENT AREA */
+
+.content-area {
+    flex: 1;
+    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+
+/* HOME PAGE */
+
+.content-area .container {
+    background-color: white;
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.content-area .container h1 {
+    margin-bottom: 15px;
+}
+
+.content-area .container p {
+    color: #666;
+}
+.react-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 20px;
 }
