@@ -1,8 +1,8 @@
 import React from "react";
-import students from "../components/dynamic_task/student";
-import { DynamicHeader } from "../components/dynamic_task/DynamicHeader";
-import DynamicProfileCard from "../components/dynamic_task/DynamicProfileCard";
-import { DynamicFooter } from "../components/dynamic_task/DynamicFooter";
+import students from "../../components/dynamic_task/student";
+import { DynamicHeader } from "../../components/dynamic_task/DynamicHeader";
+import DynamicProfileCard from "../../components/dynamic_task/DynamicProfileCard";
+import { DynamicFooter } from "../../components/dynamic_task/DynamicFooter";
 const Dynamic = () => {
   function showCards() {
     document.getElementById("clickText").style.display = "none";
