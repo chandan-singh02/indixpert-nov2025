@@ -2,8 +2,8 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 function RBBreadcrumbs() {
   return (
-    <div className="component-page">
-      <h1 className="component-title">Breadcrumbs</h1>
+    <div className="">
+      <h1 className="">Breadcrumbs</h1>
       <div className="breadcrumb-additional">
         <Breadcrumb>
           <Breadcrumb.Item

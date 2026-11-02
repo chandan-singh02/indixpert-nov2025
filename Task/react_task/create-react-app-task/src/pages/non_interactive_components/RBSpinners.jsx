@@ -17,47 +17,30 @@ function RBSpinners() {
     <div className="component-page">
       <h1 className="component-title">Spinners</h1>
 
-      <div className="spinner-section">
-        <h2>Default UI</h2>
-
-        <div className="spinner-buttons">
-          {submitting ? (
-            <Button
-              variant="primary"
-              disabled
-              className="submitting-button"
-            >
-              <Spinner
-                animation="border"
-                size="sm"
-                className="me-2"
-              />
-              Submitting
-            </Button>
-          ) : (
-            <Button
-              variant="primary"
-              onClick={handleSubmit}
-              className="submit-button"
-            >
-              Click to Submit
-            </Button>
+      <div className="d-flex gap-2">
+        <Button
+          variant="primary"
+          onClick={handleSubmit}
+          disabled={submitting}
+        >
+          {submitting && (
+            <Spinner
+              animation="border"
+              size="sm"
+              className="me-2"
+            />
           )}
 
-          <Button
-            variant={submitting ? "danger" : "outline-danger"}
-            onClick={handleCancel}
-            className="cancel-button"
-          >
-            Cancel
-          </Button>
-        </div>
+          {submitting ? "Submitting..." : "Submit"}
+        </Button>
 
-        {submitting && (
-          <p className="spinner-info">
-            Clicking the Cancel button will stop the submission process.
-          </p>
-        )}
+        <Button
+          variant="danger"
+          onClick={handleCancel}
+          disabled={!submitting}
+        >
+          Cancel
+        </Button>
       </div>
     </div>
   );

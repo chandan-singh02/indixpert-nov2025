@@ -13,8 +13,6 @@ function RBButtons() {
       <h1 className="component-title">Buttons</h1>
 
       <div className="button-section">
-        <h2>Toggle Buttons</h2>
-
         <ButtonGroup>
           <ToggleButton
             id="bold"

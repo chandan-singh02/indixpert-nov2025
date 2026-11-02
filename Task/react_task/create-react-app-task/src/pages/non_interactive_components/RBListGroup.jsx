@@ -30,25 +30,22 @@ function RBListGroup() {
   ];
 
   return (
-    <div className="component-page">
-      <h1 className="component-title">List Group</h1>
+    <div className="">
+      <h1 className="">List Group</h1>
 
-      <div className="social-card">
-        <h2>Social Media Traffic</h2>
-
+      <div className="w-50 mx-auto">
         <ListGroup variant="flush">
           {socialMedia.map((social, index) => (
             <ListGroup.Item
               key={index}
-              className="social-item"
+              className="d-flex justify-content-between align-items-center"
             >
-              <div className="social-name">
+              <div className="d-flex align-items-center gap-2">
                 <i className={`bi ${social.icon}`}></i>
-
                 <span>{social.name}</span>
               </div>
 
-              <span className="social-percentage">{social.percentage}</span>
+              <span>{social.percentage}</span>
             </ListGroup.Item>
           ))}
         </ListGroup>

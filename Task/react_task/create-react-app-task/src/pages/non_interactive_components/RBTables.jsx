@@ -50,12 +50,10 @@ function RBTables() {
   ];
 
   return (
-    <div className="component-page">
-      <h1 className="component-title">Tables</h1>
+    <div classname="container-fluid p-4">
+      <h1>Tables</h1>
 
-      {/* Non Responsive Table */}
-
-      <div className="table-section">
+      <div>
         <h2>Non Responsive Table</h2>
 
         <Table
@@ -78,11 +76,8 @@ function RBTables() {
             {employees.map((employee, index) => (
               <tr key={index}>
                 <td className="employee-name">{employee.name}</td>
-
                 <td>{employee.department}</td>
-
                 <td>{employee.salary}</td>
-
                 <td>{employee.date}</td>
 
                 <td>
@@ -98,50 +93,46 @@ function RBTables() {
         </Table>
       </div>
 
-      {/* Responsive Table */}
-
-      <div className="table-section">
+      <div>
         <h2>Responsive Table</h2>
 
-        <Table
-          responsive
-          bordered
-          hover
-          className="badge-table"
-        >
-          <thead>
-            <tr>
-              <th>Employee</th>
-              <th>Department</th>
-              <th>Salary</th>
-              <th>Payment Date</th>
-              <th>Payment Status</th>
-              <th>Employment Status</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {employees.map((employee, index) => (
-              <tr key={index}>
-                <td className="employee-name">{employee.name}</td>
-
-                <td>{employee.department}</td>
-
-                <td>{employee.salary}</td>
-
-                <td>{employee.date}</td>
-
-                <td>
-                  <span className={`status-badge ${employee.paymentClass}`}>
-                    {employee.payment}
-                  </span>
-                </td>
-
-                <td>{employee.employment}</td>
+        <div className="table-responsive">
+          <Table
+            bordered
+            hover
+            className="badge-table"
+          >
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Payment Date</th>
+                <th>Payment Status</th>
+                <th>Employment Status</th>
               </tr>
-            ))}
-          </tbody>
-        </Table>
+            </thead>
+
+            <tbody>
+              {employees.map((employee, index) => (
+                <tr key={index}>
+                  <td className="employee-name">{employee.name}</td>
+                  <td>{employee.department}</td>
+                  <td>{employee.salary}</td>
+                  <td>{employee.date}</td>
+
+                  <td>
+                    <span className={`status-badge ${employee.paymentClass}`}>
+                      {employee.payment}
+                    </span>
+                  </td>
+
+                  <td>{employee.employment}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
       </div>
     </div>
   );
