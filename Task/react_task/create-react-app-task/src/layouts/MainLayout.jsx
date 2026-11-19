@@ -12,7 +12,8 @@ function MainLayout() {
 
   return (
     <div className="app-layout">
-      {/* Sidebar */}
+      {/* ================= SIDEBAR ================= */}
+
       <div className="sidebar">
         <h3 className="sidebar-title semi-bold">Menu</h3>
         <hr />
@@ -135,24 +136,46 @@ function MainLayout() {
           {openSection === "forms" && (
             <div className="section-items">
               <Link to="/rb-basic-form">RB Basic Form</Link>
-
               <Link to="/rb-formik-form">RB Formik Form</Link>
-
               <Link to="/rhf-form">RHF Form</Link>
-
               <Link to="/rhf-form-yup">RHF Form Yup</Link>
+            </div>
+          )}
+        </div>
+
+        {/* ================= BLOG LISTING & SEARCH ================= */}
+
+        <div className="sidebar-section">
+          <div
+            className="section-header"
+            onClick={() => handleSection("blog")}
+          >
+            <span>Blog Listing & Search</span>
+
+            <i
+              className={
+                openSection === "blog"
+                  ? "bi bi-chevron-up"
+                  : "bi bi-chevron-down"
+              }
+            ></i>
+          </div>
+
+          {openSection === "blog" && (
+            <div className="section-items">
+              <Link to="/blogs">Blog Listing</Link>
             </div>
           )}
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* ================= MAIN CONTENT ================= */}
 
       <div className="content-area">
         <Outlet />
       </div>
 
-      {/* Toastify */}
+      {/* ================= TOASTIFY ================= */}
 
       <ToastContainer
         position="top-right"

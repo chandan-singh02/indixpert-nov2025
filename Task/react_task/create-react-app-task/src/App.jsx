@@ -29,6 +29,8 @@ import RBBasicFormControls from "./pages/forms/RBBasicFormControl";
 import RBFormikForm from "./pages/forms/RBFormikForm";
 import RHFForm from "./pages/forms/RHFForm";
 import RHFFormYup from "./pages/forms/RHFFormYup";
+import BlogListing from "./pages/blog/BlogListing";
+import BlogDetails from "./pages/blog/BlogDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -145,6 +147,14 @@ const router = createBrowserRouter([
       {
         path: "rhf-form-yup",
         element: <RHFFormYup />,
+      },
+      {
+        path: "blogs",
+        element: <BlogListing />,
+      },
+      {
+        path: "blogs/:id",
+        element: <BlogDetails />,
       },
     ],
   },
